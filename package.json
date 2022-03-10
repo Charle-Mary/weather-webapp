@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "bash": "source set_env.sh",
+    "build": "source set_env.sh",
     "start": "node src/app.js"
   },
   "keywords": [],
