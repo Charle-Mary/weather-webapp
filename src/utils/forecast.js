@@ -7,8 +7,8 @@ const forecast = (long, lat, callback) => {
         qs: {alt: '0', tempunit: 'C', windunit: 'MS', tz: 'Europe/London', lang: 'en'},
         json: true,
         headers: {
-          'x-rapidapi-host': 'foreca-weather.p.rapidapi.com',
-          'x-rapidapi-key': 'b515287a96msh5d85a8855aebb8fp1d25b9jsnf2f211ec4c7a',
+          'x-rapidapi-host': process.env.X_RAPIDAPI_HOST,
+          'x-rapidapi-key': process.env.X_RAPIDAPI_KEY,
           useQueryString: true
         }
       };
