@@ -4,7 +4,7 @@ const forecast = (long, lat, callback) => {
     const options = {
         method: 'GET',
         url: 'https://foreca-weather.p.rapidapi.com/current/' + long +',' + lat,
-        qs: {alt: '0', tempunit: 'F', windunit: 'MS', tz: 'Europe/London', lang: 'en'},
+        qs: {alt: '0', tempunit: 'C', windunit: 'MS', tz: 'Europe/London', lang: 'en'},
         json: true,
         headers: {
           'x-rapidapi-host': 'foreca-weather.p.rapidapi.com',
