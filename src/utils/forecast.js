@@ -17,7 +17,10 @@ const forecast = (long, lat, callback) => {
         if (error) {
             callback('Could not connect to weather API', undefined)
         } else {
-            callback(undefined, `It is currently ${body.current.temperature} degrees out there and there is ${body.current.precipProb} percent probability of it raining`)
+            var mood = body.current.symbolPhrase
+            mood = mood.charAt(0).toUpperCase() + mood.slice(1)
+            callback(undefined, `${mood}, It is currently ${body.current.temperature} degrees but it feels like \
+             ${body.current.feelsLikeTemp} degrees out there and there is ${body.current.precipProb} percent probability of it raining`)
         }
     })  
       
